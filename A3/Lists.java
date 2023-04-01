@@ -122,7 +122,7 @@ public class Lists{
                 list1.contains(string);
                 System.out.println(string + " Tem na lista 2 e lista 1");
             }
-        }
+        } 
     
     /*
     Verifique se a lista 1 é igual a lista 2.
@@ -202,6 +202,15 @@ public class Lists{
             System.out.println("Elementos da lista 1");
             for (String string : list1) {
                 System.out.println(string);
+            }
+        }
+
+
+        void verificarList3DentroDeList1(){
+            if(!list3.isEmpty() && list1.containsAll(list3)){
+                System.out.println("list3 contem em list1");
+            }else{
+                System.out.println("lista3 Nao contem em list1 ou list3 esta vazia");
             }
         }
 

@@ -23,7 +23,8 @@ public class Main{
             "Limpe a lista 3",
             "Verifique se a lista 3 está vazia",
             "Mostre cada elemento da lista 1",
-            "Listar todas as listas"
+            "Listar todas as listas",
+            "Verifique se todos os elementos da lista 3 estão na lista 1"
         };
     
         int intInput = 1;
@@ -81,11 +82,14 @@ public class Main{
                 case "12":
                     list.listarListas();
                     break;
+                case "13":
+                    list.verificarList3DentroDeList1();
+                    break;
                 default:
                     System.out.println("Trying");
                     break;
             }
-            System.out.println("just hit a Enter");
+            System.out.println("just hit an Enter");
             input.nextLine();  
         }
             input.close();

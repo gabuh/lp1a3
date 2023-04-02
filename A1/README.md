@@ -7,7 +7,9 @@ O exercício consiste em criar um sistema de gerenciamento de animais em um zool
 As classes filhas de Animal serão: 
 
 :white_check_mark: [Mamifero: terá um atributo privado `tempoGestacao (int)` e implementará o método `emitirSom()` com um som característico dos mamíferos.](Mamifero.java)
+
 :white_check_mark: [Ave: terá um atributo privado `tipoBico (String)` e implementará o método `emitirSom()` com um som característico das aves.](Ave.java)
+
 :white_check_mark: [Reptil: terá um atributo privado `temperaturaCorporal (double)` e implementará o método `emitirSom()` com um som característico dos répteis.](Reptil.java)
 
 :white_check_mark: [Cada classe filha deve ter um construtor que inicialize os atributos da classe e também chame o construtor da classe pai (Animal).](Reptil.java#L8)

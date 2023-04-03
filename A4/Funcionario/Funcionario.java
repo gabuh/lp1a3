@@ -1,4 +1,4 @@
-package A4;
+package A4.Funcionario;
 
 import java.util.Date;
 
@@ -50,7 +50,7 @@ public class Funcionario{
   }
 
 
-  public void setNome(String nome) {
+  protected void setNome(String nome) {
     this.nome = nome;
   }
 
@@ -60,7 +60,7 @@ public class Funcionario{
   }
 
 
-  public void setId(int id) {
+  protected void setId(int id) {
     this.id = id;
   }
 
@@ -70,7 +70,7 @@ public class Funcionario{
   }
 
 
-  public void setSalario(double salario) {
+  protected void setSalario(double salario) {
     this.salario = salario;
   }
 
@@ -80,7 +80,7 @@ public class Funcionario{
   }
 
 
-  public void setHoraEntrada(Date horaEntrada) {
+  protected void setHoraEntrada(Date horaEntrada) {
     this.horaEntrada = horaEntrada;
   }
 
@@ -90,9 +90,16 @@ public class Funcionario{
   }
 
 
-  public void setHoraSaida(Date horaSaida) {
+  protected void setHoraSaida(Date horaSaida) {
     this.horaSaida = horaSaida;
   }
+
+
+  @Override
+  public String toString() {
+    return "Funcionario [nome=" + nome + ", id=" + id + ", salario=" + salario + "]";
+  }
+
   
 }
 

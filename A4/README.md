@@ -10,9 +10,10 @@ Sua tarefa é criar uma classe Departamento que permita adicionar e listar funci
 
 - [x] Crie um interface que define os métodos entrada e saída que recebam a hora de entrada e saída do funcionário, 
 
-- [ ] implemente essa interface para as classes Programador e Analista, mas não para Gerente, fazendo a atribuição da hora de entrada e hora de saída ao funcionário.
+- [x] implemente essa interface para as classes Programador e Analista, mas não para Gerente, fazendo a atribuição da hora de entrada e hora de saída ao funcionário.
 
 - [ ] Além disso, você deve implementar o método equals na classe Funcionario para que ele compare dois funcionários com base em seus IDs. Para isso, você pode usar a classe Object, já que todos os objetos em Java herdam dela.
+
 
 - [ ] Em seguida, crie uma classe Departamento que use Generics para permitir que ela manipule um lista de qualquer tipo de Funcionário que implemente Ponto e outra lista que permita apenas gerente. 
 
@@ -34,6 +35,9 @@ class Funcionario{
   - salario : double
   - horaEntrada : Date
   - horaSaida: Date
+
+  + hashCode() int
+  + equals(Object obj) boolean
 }
 
 class Gerente{
@@ -56,15 +60,20 @@ class Ponto{
 
 class Departamento{
   - funcionarios : List<>
+  - gerentes: List
   
-  + adicionarFuncionario() : void 
+  + adicionarFuncionario<U>() : void 
   + listarFuncionarios() : void
+  + listarAtrasados(): void
   
 }
 
-Funcionario <|-- Gerente
-Funcionario <|-- Programador
-Funcionario <|-- Analista
+Funcionario <|-- Gerente : extends
+Funcionario <|-- Programador : extends
+Funcionario <|-- Analista : extends
+
+Programador <|-- Ponto : implements
+Analista <|-- Ponto : implements
 
 
 ```

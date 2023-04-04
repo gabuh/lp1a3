@@ -102,6 +102,3 @@ public class Funcionario{
 
   
 }
-
-
-//nome, um ID, um salário, hora de entrada e hora de saída. Sua tarefa é criar uma classe Departamento que permita adicionar e listar funcionários.

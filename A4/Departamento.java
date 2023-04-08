@@ -1,7 +1,7 @@
 package A4;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import A4.Funcionario.Funcionario;
@@ -30,12 +30,17 @@ public class Departamento{
     }
 
 
-    public static void listarAtrasados(Date date){
+    public static void listarAtrasados(LocalDateTime date){
+        int comparacaoDeHoras;
+        int quantidadeDeHoras;
         System.out.println("------------\nFUNCIONARIOS ATRASADOS\n -------");
         for (Funcionario funcionario : funcionarios) {
-            int comparacaoDeHoras = funcionario.getHoraEntrada().compareTo(date);
-            if(comparacaoDeHoras > 0 ){
-                System.out.println(funcionario.toString());
+            if(funcionario.getHoraEntrada() != null){
+                comparacaoDeHoras = funcionario.getHoraEntrada().compareTo(date);
+                if(comparacaoDeHoras > 0 ){
+                    quantidadeDeHoras = (date.getHour() - funcionario.getHoraEntrada().getHour()) + (date.getMinute() - funcionario.getHoraEntrada().getMinute());
+                    System.out.println(funcionario.toString() + ", Horario de entrada: " + funcionario.getHoraEntrada().toString() + ", Horario de comparacacao: " + date.toString()+", Tempo:" + quantidadeDeHoras);
+                }
             }
         }
     }

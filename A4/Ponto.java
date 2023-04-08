@@ -1,8 +1,8 @@
 package A4;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public interface Ponto {
-    public void entradaFuncionario(Date date);
-    public void saidaFuncionario(Date date);
+    public void entradaFuncionario(LocalDateTime date);
+    public void saidaFuncionario(LocalDateTime date);
 }

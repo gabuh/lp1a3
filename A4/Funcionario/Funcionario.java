@@ -1,18 +1,18 @@
 package A4.Funcionario;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Funcionario{
   
   private String nome;
   private int id;
   private double salario;
-  private Date horaEntrada;
-  private Date horaSaida;
+  private LocalDateTime horaEntrada;
+  private LocalDateTime horaSaida;
 
   
 
-  public Funcionario(String nome, int id, double salario, Date horaEntrada, Date horaSaida) {
+  public Funcionario(String nome, int id, double salario, LocalDateTime horaEntrada, LocalDateTime horaSaida) {
     this.nome = nome;
     this.id = id;
     this.salario = salario;
@@ -75,22 +75,22 @@ public class Funcionario{
   }
 
 
-  public Date getHoraEntrada() {
+  public LocalDateTime getHoraEntrada() {
     return horaEntrada;
   }
 
 
-  protected void setHoraEntrada(Date horaEntrada) {
+  protected void setHoraEntrada(LocalDateTime horaEntrada) {
     this.horaEntrada = horaEntrada;
   }
 
 
-  public Date getHoraSaida() {
+  public LocalDateTime getHoraSaida() {
     return horaSaida;
   }
 
 
-  protected void setHoraSaida(Date horaSaida) {
+  protected void setHoraSaida(LocalDateTime horaSaida) {
     this.horaSaida = horaSaida;
   }
 

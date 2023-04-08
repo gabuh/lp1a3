@@ -1,6 +1,6 @@
 package A4.Funcionario;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 
 import A4.Funcionario.Builder.FuncionarioBuilder;
 
@@ -8,8 +8,8 @@ public class ProgramadorBuilder implements FuncionarioBuilder{
     private String nome;
     private int id;
     private double salario;
-    private Date horaEntrada;
-    private Date horaSaida;
+    private LocalDateTime horaEntrada;
+    private LocalDateTime horaSaida;
 
     
     public ProgramadorBuilder setNome(String nome) {
@@ -24,11 +24,11 @@ public class ProgramadorBuilder implements FuncionarioBuilder{
         this.salario = salario;
         return this;
     }
-    public ProgramadorBuilder setHoraEntrada(Date horaEntrada) {
+    public ProgramadorBuilder setHoraEntrada(LocalDateTime horaEntrada) {
         this.horaEntrada = horaEntrada;
         return this;
     }
-    public ProgramadorBuilder setHoraSaida(Date horaSaida) {
+    public ProgramadorBuilder setHoraSaida(LocalDateTime horaSaida) {
         this.horaSaida = horaSaida;
         return this;
     }

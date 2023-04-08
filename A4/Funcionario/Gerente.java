@@ -1,10 +1,10 @@
 package A4.Funcionario;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Gerente extends Funcionario{
 
-    protected Gerente(String nome, int id, double salario, Date horaEntrada, Date horaSaida) {
+    protected Gerente(String nome, int id, double salario, LocalDateTime horaEntrada, LocalDateTime horaSaida) {
         super(nome, id, salario, horaEntrada, horaSaida);
     }
 
@@ -14,6 +14,5 @@ public class Gerente extends Funcionario{
         return super.toString().replaceAll("Funcionario","Gerente");
     }
 
-    
     
 }
